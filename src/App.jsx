@@ -43,22 +43,22 @@ export default function App() {
       <NavBar 
         currentPage={currentPage} 
         setCurrentPage={setCurrentPage}
-        isSideBarOpen={isSideBarOpen}
-        setIsSideBarOpen={setIsSideBarOpen}
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
       />
 
-      <SideBar
-        isOpen={isSideBarOpen}
+      <SideBar 
+        isOpen={isSidebarOpen}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
-        setIsSideBarOpen={setIsSideBarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
       />
       
       {/* Overlay for mobile sidebar */}
-      {isSideBarOpen && (
+      {isSidebarOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={() => setIsSideBarOpen(false)}
+          onClick={() => setIsSidebarOpen(false)}
         />
       )}
       
