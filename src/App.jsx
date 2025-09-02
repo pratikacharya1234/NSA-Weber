@@ -8,7 +8,7 @@ import AdminPannel from './AdminPannel/AdminPannel';
 import PageNotFound from './Pages/PageNotFound';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
-import Sidebar from './Components/Sidebar';
+import SideBar from './Components/SideBar';
 import { useState } from 'react';
 import './App.css'
 export default function App() {
@@ -43,22 +43,22 @@ export default function App() {
       <NavBar 
         currentPage={currentPage} 
         setCurrentPage={setCurrentPage}
-        isSidebarOpen={isSidebarOpen}
-        setIsSidebarOpen={setIsSidebarOpen}
+        isSideBarOpen={isSideBarOpen}
+        setIsSideBarOpen={setIsSideBarOpen}
       />
-      
-      <Sidebar 
-        isOpen={isSidebarOpen}
+
+      <SideBar
+        isOpen={isSideBarOpen}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
-        setIsSidebarOpen={setIsSidebarOpen}
+        setIsSideBarOpen={setIsSideBarOpen}
       />
       
       {/* Overlay for mobile sidebar */}
-      {isSidebarOpen && (
+      {isSideBarOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
+          onClick={() => setIsSideBarOpen(false)}
         />
       )}
       
